@@ -187,8 +187,8 @@ export const projects: Project[] = [
     assetGroup: "3d",
     title: { en: "Chivas Regal", fr: "Chivas Regal" },
     context: {
-      en: "[Chivas Regal](https://chivas-dolly-cohen-demo.netlify.app/) is a premium Blended Scotch Whisky owned by Pernod Ricard. I contributed to the creation of an immersive 3D WebGL experience: designing and modelling 3D assets for the bottle's motion sequence, crafting 3D scene renders, and handling the sound design and voiceover of the experience.",
-      fr: "[Chivas Regal](https://chivas-dolly-cohen-demo.netlify.app/) est un Scotch Whisky Blended premium appartenant à Pernod Ricard. J'ai contribué à la création d'une expérience 3D WebGL immersive : modélisation d'assets 3D pour la séquence motion de la bouteille, création de rendus de scènes 3D, ainsi que le sound design et la voix off.",
+      en: "[Chivas Regal](https://chivas-dolly-cohen-demo.netlify.app/) is a premium Blended Scotch Whisky owned by Pernod Ricard. I designed and modelled the 3D assets for the bottle's motion sequence, crafted 3D scene renders, and produced the sound design and voiceover for this immersive experience.",
+      fr: "[Chivas Regal](https://chivas-dolly-cohen-demo.netlify.app/) est un Scotch Whisky Blended premium appartenant à Pernod Ricard. J'ai modélisé les assets 3D pour la séquence motion de la bouteille, créé les rendus de scènes 3D, et réalisé le sound design ainsi que la voix off de cette expérience immersive.",
     },
     tags: [
       { en: "3D", fr: "3D" },
