@@ -191,8 +191,7 @@ export const projects: Project[] = [
     tags: [
       { en: "3D", fr: "3D" },
       { en: "Motion", fr: "Motion" },
-      { en: "WebGL", fr: "WebGL" },
-      { en: "Sound", fr: "Sound" },
+      { en: "Sound Design", fr: "Sound Design" },
     ],
     year: "2024",
     type: "3D / WebGL",
