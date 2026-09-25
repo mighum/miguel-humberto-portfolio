@@ -1612,6 +1612,9 @@ function ProjectPanel({
                 {project.links.tiktok && (
                   <ResourceLink href={project.links.tiktok}>{mt.tiktok}</ResourceLink>
                 )}
+                {project.links.website && (
+                  <ResourceLink href={project.links.website}>{mt.website}</ResourceLink>
+                )}
               </div>
         </section>
       </div>

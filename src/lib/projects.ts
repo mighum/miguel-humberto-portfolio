@@ -94,6 +94,8 @@ export interface Project {
     figma?: string;
     /** Product / template store page (e.g. VS Good). */
     template?: string;
+    /** Live site / interactive demo. */
+    website?: string;
   };
   deliverableCount: number;
   /** Explicit deliverables list. When set, overrides deliverableCount placeholders. */
@@ -175,6 +177,33 @@ export function projectHeroTags(project: Project): LocalizedCopy[] {
 }
 
 export const projects: Project[] = [
+  {
+    id: "08",
+    slug: "chivas",
+    collection: "main",
+    categories: ["3d"],
+    assetGroup: "3d",
+    title: { en: "Chivas Regal", fr: "Chivas Regal" },
+    context: {
+      en: "Chivas Regal is a premium Blended Scotch Whisky owned by Pernod Ricard. I contributed to the creation of an immersive 3D WebGL experience: designing and modelling 3D assets for the bottle's motion sequence, crafting 3D scene renders, and handling the sound design and voiceover of the experience.",
+      fr: "Chivas Regal est un Scotch Whisky Blended premium appartenant à Pernod Ricard. J'ai contribué à la création d'une expérience 3D WebGL immersive : modélisation d'assets 3D pour la séquence motion de la bouteille, création de rendus de scènes 3D, ainsi que le sound design et la voix off de l'expérience.",
+    },
+    tags: [
+      { en: "3D", fr: "3D" },
+      { en: "Motion", fr: "Motion" },
+      { en: "WebGL", fr: "WebGL" },
+      { en: "Sound", fr: "Sound" },
+    ],
+    year: "2024",
+    type: "3D / WebGL",
+    hasVideo: false,
+    tools: ["Blender", "After Effects", "Premiere Pro"],
+    links: {
+      website: "https://chivas-dolly-cohen-demo.netlify.app/",
+    },
+    deliverableCount: 1,
+    deliverables: [{ type: "placeholder" }],
+  },
   {
     id: "01",
     slug: "ai-cgi-station-f",
