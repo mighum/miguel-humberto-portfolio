@@ -203,8 +203,25 @@ export const projects: Project[] = [
     links: {
       website: "https://chivas-dolly-cohen-demo.netlify.app/",
     },
-    deliverableCount: 1,
-    deliverables: [{ type: "placeholder" }],
+    deliverableCount: 2,
+    deliverableLayout: "stack",
+    deliverables: [
+      { type: "still", file: "deliverables/deliverable-1-chivas.jpg" },
+      { type: "still", file: "deliverables/deliverable-2-chivas.jpg" },
+    ],
+    processTitle: { en: "Event", fr: "Événement" },
+    processItems: [
+      {
+        type: "player",
+        file: "process/process-event-1-chivas.mp4",
+        poster: "process/poster-event-1-chivas.jpg",
+      },
+      {
+        type: "player",
+        file: "process/process-event-2-chivas.mp4",
+        poster: "process/poster-event-2-chivas.jpg",
+      },
+    ],
   },
   {
     id: "01",
