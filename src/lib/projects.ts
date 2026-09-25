@@ -45,7 +45,9 @@ export type Deliverable =
 export type ProcessItem =
   | { type: "loop"; file: string }
   | { type: "image"; file: string; fullBleed?: boolean }
-  | { type: "player"; file: string; poster: string; linkedinUrl?: string };
+  /** `vertical` keeps a native 9:16 clip in its own aspect ratio instead of
+   *  the default 16:9 frame, which would otherwise crop it via object-cover. */
+  | { type: "player"; file: string; poster: string; linkedinUrl?: string; vertical?: boolean };
 
 export interface Project {
   id: string;
@@ -212,13 +214,14 @@ export const projects: Project[] = [
     processItems: [
       {
         type: "player",
-        file: "process/process-event-1-chivas.mp4",
-        poster: "process/poster-event-1-chivas.jpg",
+        file: "process/process-event-2-chivas.mp4",
+        poster: "process/poster-event-2-chivas.jpg",
+        vertical: true,
       },
       {
         type: "player",
-        file: "process/process-event-2-chivas.mp4",
-        poster: "process/poster-event-2-chivas.jpg",
+        file: "process/process-event-1-chivas.mp4",
+        poster: "process/poster-event-1-chivas.jpg",
       },
     ],
   },
