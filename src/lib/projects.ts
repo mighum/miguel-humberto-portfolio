@@ -196,7 +196,9 @@ export const projects: Project[] = [
     ],
     year: "2024",
     type: "3D / WebGL",
-    hasVideo: false,
+    hasVideo: true,
+    videoUrl: "/projects/3d/chivas/cover-video-chivas.mp4",
+    videoPoster: "poster-cover-chivas.jpg",
     tools: ["Premiere Pro", "FL Studio"],
     links: {
       website: "https://chivas-dolly-cohen-demo.netlify.app/",
