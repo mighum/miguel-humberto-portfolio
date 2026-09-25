@@ -45,7 +45,9 @@ export type Deliverable =
 export type ProcessItem =
   | { type: "loop"; file: string }
   | { type: "image"; file: string; fullBleed?: boolean }
-  | { type: "player"; file: string; poster: string; linkedinUrl?: string };
+  /** `vertical` keeps a native 9:16 clip in its own aspect ratio instead of
+   *  the default 16:9 frame, which would otherwise crop it via object-cover. */
+  | { type: "player"; file: string; poster: string; linkedinUrl?: string; vertical?: boolean };
 
 export interface Project {
   id: string;
@@ -94,6 +96,8 @@ export interface Project {
     figma?: string;
     /** Product / template store page (e.g. VS Good). */
     template?: string;
+    /** Live site / interactive demo. */
+    website?: string;
   };
   deliverableCount: number;
   /** Explicit deliverables list. When set, overrides deliverableCount placeholders. */
@@ -175,6 +179,53 @@ export function projectHeroTags(project: Project): LocalizedCopy[] {
 }
 
 export const projects: Project[] = [
+  {
+    id: "08",
+    slug: "chivas",
+    collection: "main",
+    categories: ["3d"],
+    assetGroup: "3d",
+    title: { en: "Chivas Regal", fr: "Chivas Regal" },
+    context: {
+      en: "[Chivas Regal](https://chivas-dolly-cohen-demo.netlify.app/) is a premium Blended Scotch Whisky owned by Pernod Ricard. I designed and modelled the 3D assets for the bottle's motion sequence, crafted 3D scene renders, and produced the sound design and voiceover for this immersive experience.",
+      fr: "[Chivas Regal](https://chivas-dolly-cohen-demo.netlify.app/) est un Scotch Whisky Blended premium appartenant à Pernod Ricard. J'ai modélisé les assets 3D pour la séquence motion de la bouteille, créé les rendus de scènes 3D, et réalisé le sound design ainsi que la voix off de cette expérience immersive.",
+    },
+    tags: [
+      { en: "3D", fr: "3D" },
+      { en: "Motion", fr: "Motion" },
+      { en: "Sound Design", fr: "Sound Design" },
+    ],
+    year: "2024",
+    type: "3D / WebGL",
+    hasVideo: true,
+    videoUrl: "/projects/3d/chivas/cover-video-chivas.mp4",
+    videoPoster: "poster-cover-chivas.jpg",
+    unmuteOnOpen: true,
+    tools: ["Blender", "Premiere Pro", "FL Studio"],
+    links: {
+      website: "https://chivas-dolly-cohen-demo.netlify.app/",
+    },
+    deliverableCount: 2,
+    deliverableLayout: "stack",
+    deliverables: [
+      { type: "still", file: "deliverables/deliverable-1-chivas.jpg" },
+      { type: "still", file: "deliverables/deliverable-2-chivas.jpg" },
+    ],
+    processTitle: { en: "Event", fr: "Événement" },
+    processItems: [
+      {
+        type: "player",
+        file: "process/process-event-2-chivas.mp4",
+        poster: "process/poster-event-2-chivas.jpg",
+        vertical: true,
+      },
+      {
+        type: "player",
+        file: "process/process-event-1-chivas.mp4",
+        poster: "process/poster-event-1-chivas.jpg",
+      },
+    ],
+  },
   {
     id: "01",
     slug: "ai-cgi-station-f",

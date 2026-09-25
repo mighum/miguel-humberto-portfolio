@@ -215,10 +215,12 @@ function ProcessClickPlayer({
   src,
   poster,
   linkedinUrl,
+  vertical,
 }: {
   src: string;
   poster: string;
   linkedinUrl?: string;
+  vertical?: boolean;
 }) {
   const { locale } = useLocale();
   const t = translations[locale];
@@ -231,8 +233,12 @@ function ProcessClickPlayer({
   };
 
   return (
-    <div className="mx-auto w-full max-w-3xl">
-      <div className="group relative aspect-video overflow-hidden rounded-xl bg-bg-secondary">
+    <div className={`mx-auto w-full ${vertical ? "max-w-[22rem]" : "max-w-3xl"}`}>
+      <div
+        className={`group relative overflow-hidden rounded-xl bg-bg-secondary ${
+          vertical ? "aspect-[9/16]" : "aspect-video"
+        }`}
+      >
         <video
           ref={videoRef}
           src={src}
@@ -319,6 +325,7 @@ function ProcessWorkflowStack({
               src={`${assetBase}/${item.file}`}
               poster={`${assetBase}/${item.poster}`}
               linkedinUrl={item.linkedinUrl}
+              vertical={item.vertical}
             />
           );
         }
@@ -1611,6 +1618,9 @@ function ProjectPanel({
                 )}
                 {project.links.tiktok && (
                   <ResourceLink href={project.links.tiktok}>{mt.tiktok}</ResourceLink>
+                )}
+                {project.links.website && (
+                  <ResourceLink href={project.links.website}>{mt.website}</ResourceLink>
                 )}
               </div>
         </section>
