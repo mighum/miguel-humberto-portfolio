@@ -201,7 +201,7 @@ export const projects: Project[] = [
     videoUrl: "/projects/3d/chivas/cover-video-chivas.mp4",
     videoPoster: "poster-cover-chivas.jpg",
     unmuteOnOpen: true,
-    tools: ["Premiere Pro", "FL Studio"],
+    tools: ["Blender", "Premiere Pro", "FL Studio"],
     links: {
       website: "https://chivas-dolly-cohen-demo.netlify.app/",
     },
