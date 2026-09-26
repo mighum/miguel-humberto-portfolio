@@ -234,8 +234,8 @@ export const projects: Project[] = [
     assetGroup: "ai",
     title: { en: "AI CGI Station F", fr: "AI CGI Station F" },
     context: {
-      en: "Station F is the world's largest startup campus, in Paris, home to hundreds of startups backed by Meta, Microsoft and Google. Its iconic clay sculpture became the starting point of this CGI project. Using AI, I transformed it into a series of iconic tech logos.",
-      fr: "Station F est le plus grand campus de startups au monde, à Paris, accueillant des centaines d'entreprises soutenues par Meta, Microsoft et Google. Sa sculpture d'argile emblématique est devenue le point de départ de ce projet CGI. À l'aide de l'IA, je l'ai transformée en une série de logos iconiques du monde de la tech.",
+      en: "[Station F](https://stationf.co) is the world's largest startup campus, in Paris, home to hundreds of startups backed by Meta, Microsoft and Google. Its iconic clay sculpture became the starting point of this CGI project. Using AI, I transformed it into a series of iconic tech logos.",
+      fr: "[Station F](https://stationf.co) est le plus grand campus de startups au monde, à Paris, accueillant des centaines d'entreprises soutenues par Meta, Microsoft et Google. Sa sculpture d'argile emblématique est devenue le point de départ de ce projet CGI. À l'aide de l'IA, je l'ai transformée en une série de logos iconiques du monde de la tech.",
     },
     tags: [
       { en: "CGI", fr: "CGI" },
