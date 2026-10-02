@@ -459,8 +459,7 @@ export const projects: Project[] = [
       "Premiere Pro",
       "After Effects",
     ],
-    // VS Good product URL - wire when available.
-    links: { template: "#" },
+    links: { template: "https://vs-goods.store/product/goodies-factory/" },
     deliverableCount: 11,
     deliverableLayout: "bento",
     deliverables: [3, 9, 1, 4, 10, 7, 2, 5, 6, 11, 8].map((number) => ({
