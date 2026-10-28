@@ -110,7 +110,7 @@ export interface Project {
    * - `composite-stack`: full-bleed composite frame + video slot, then a grid
    *   of stills, then any trailing embeds.
    */
-  deliverableLayout?: "bento" | "category-bento" | "stack" | "composite-stack";
+  deliverableLayout?: "bento" | "category-bento" | "stack" | "composite-stack" | "video-then-grid";
   /** Filenames relative to the project folder shown in the Process section. */
   processImages?: string[];
   /** Vertical workflow items (loops / images). Takes priority over processImages. */
@@ -452,7 +452,7 @@ export const projects: Project[] = [
     tools: ["Recraft", "Magnific", "Fal", "Seedream", "Figma", "Premiere Pro", "Photoshop"],
     links: {},
     deliverableCount: 7,
-    deliverableLayout: "stack",
+    deliverableLayout: "video-then-grid",
     deliverables: [
       {
         type: "video",
