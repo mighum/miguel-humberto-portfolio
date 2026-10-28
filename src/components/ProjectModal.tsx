@@ -967,6 +967,58 @@ function DeliverablesCompositeStack({
 }
 
 /**
+ * First video deliverable full-width, then remaining stills/images in a
+ * responsive 2-col (desktop) / 1-col (mobile) grid.
+ */
+function DeliverablesVideoThenGrid({
+  deliverables,
+  assetBase,
+}: {
+  deliverables: Deliverable[];
+  assetBase: string;
+}) {
+  const video = deliverables.find((d) => d.type === "video");
+  const stills = deliverables.filter((d) => d.type === "still" || d.type === "image");
+  return (
+    <div className="space-y-10 md:space-y-14">
+      {video && video.type === "video" && (
+        <div className="mx-auto aspect-[9/16] w-full max-w-[22rem]">
+          <DeliverableVideo
+            src={`${assetBase}/${video.url}`}
+            sound={video.sound}
+            poster={video.poster ? `${assetBase}/${video.poster}` : undefined}
+          />
+        </div>
+      )}
+      {stills.length > 0 && (
+        <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
+          {stills.map((d, i) =>
+            d.type === "still" ? (
+              // eslint-disable-next-line @next/next/no-img-element
+              <img
+                key={`${d.file}-${i}`}
+                src={`${assetBase}/${d.file}`}
+                alt=""
+                className="block h-auto w-full rounded-xl"
+                loading="lazy"
+              />
+            ) : d.type === "image" ? (
+              <DeliverablePicture
+                key={`${d.url}-${i}`}
+                deliverable={d}
+                assetBase={assetBase}
+                alt=""
+                className="aspect-[3/4]"
+              />
+            ) : null,
+          )}
+        </div>
+      )}
+    </div>
+  );
+}
+
+/**
  * One deliverable per row, each keeping its own aspect ratio. A vertical social
  * cut is capped to a phone-like width so it does not tower over a 16:9 embed.
  */
@@ -1445,6 +1497,11 @@ function ProjectPanel({
                   deliverables={project.deliverables}
                   assetBase={projectAssetBase(project)}
                   youtubeTitle={mt.youtube}
+                />
+              ) : project.deliverables && project.deliverableLayout === "video-then-grid" ? (
+                <DeliverablesVideoThenGrid
+                  deliverables={project.deliverables}
+                  assetBase={projectAssetBase(project)}
                 />
               ) : project.deliverables && project.deliverableLayout === "stack" ? (
                 <DeliverablesStack

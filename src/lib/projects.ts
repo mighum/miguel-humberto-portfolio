@@ -110,7 +110,7 @@ export interface Project {
    * - `composite-stack`: full-bleed composite frame + video slot, then a grid
    *   of stills, then any trailing embeds.
    */
-  deliverableLayout?: "bento" | "category-bento" | "stack" | "composite-stack";
+  deliverableLayout?: "bento" | "category-bento" | "stack" | "composite-stack" | "video-then-grid";
   /** Filenames relative to the project folder shown in the Process section. */
   processImages?: string[];
   /** Vertical workflow items (loops / images). Takes priority over processImages. */
@@ -425,6 +425,46 @@ export const projects: Project[] = [
       { type: "image", file: "process/process-blender-1-gims-dystinct-spider.png" },
       { type: "loop", file: "process/process-blender-2-gims-dystinct-spider.mp4" },
       { type: "image", file: "process/process-blender-3-gims-dystinct-spider.png" },
+    ],
+  },
+  {
+    id: "09",
+    slug: "tasteful",
+    collection: "main",
+    categories: ["ai"],
+    assetGroup: "ai",
+    title: { en: "Tasteful", fr: "Tasteful" },
+    context: {
+      en: "Tasteful is a visual exploration built around the concept of \"tastefully crafted\" design. It explores how generative AI can move beyond raw, random outputs to meet the refined aesthetic standards of professional designers. Through structured pipelines and disciplined art direction, the project showcases a series of studio-grade visual assets maintaining strict visual consistency.",
+      fr: "Tasteful est une exploration visuelle construite autour du concept de design « raffiné ». Le projet interroge la capacité de l'IA générative à dépasser les sorties brutes et aléatoires pour atteindre les standards esthétiques des designers professionnels. À travers des pipelines structurés et une direction artistique rigoureuse, il présente une série de visuels niveau studio, avec une cohérence visuelle stricte.",
+    },
+    tags: [
+      { en: "Fashion", fr: "Mode" },
+      { en: "Photography", fr: "Photographie" },
+      { en: "Art Direction", fr: "Direction artistique" },
+    ],
+    year: "2026",
+    type: "Video",
+    hasVideo: true,
+    videoUrl: "/projects/ai/tasteful/cover-video-tasteful.mp4",
+    videoPoster: "poster-cover-tasteful.jpg",
+    unmuteOnOpen: true,
+    tools: ["Recraft", "Magnific", "Fal", "Seedream", "Figma", "Premiere Pro", "Photoshop"],
+    links: {},
+    deliverableCount: 7,
+    deliverableLayout: "video-then-grid",
+    deliverables: [
+      {
+        type: "video",
+        url: "deliverables/deliverable-shooting-photo-tasteful.mp4",
+        sound: true,
+      },
+      { type: "still", file: "deliverables/deliverable-ayo-tailoring-tasteful.webp" },
+      { type: "still", file: "deliverables/deliverable-elena-tailoring-tasteful.webp" },
+      { type: "still", file: "deliverables/deliverable-ines-tailoring-tasteful.webp" },
+      { type: "still", file: "deliverables/deliverable-mina-tailoring-tasteful.webp" },
+      { type: "still", file: "deliverables/deliverable-nour-tailoring-tasteful.webp" },
+      { type: "still", file: "deliverables/deliverable-mannequins-tasteful.webp" },
     ],
   },
   {
