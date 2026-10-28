@@ -180,6 +180,70 @@ export function projectHeroTags(project: Project): LocalizedCopy[] {
 
 export const projects: Project[] = [
   {
+    id: "09",
+    slug: "tasteful",
+    collection: "main",
+    categories: ["ai"],
+    assetGroup: "ai",
+    title: { en: "Tasteful", fr: "Tasteful" },
+    context: {
+      en: "Tasteful is a visual exploration built around the concept of \"tastefully crafted\" design. It explores how generative AI can move beyond raw, random outputs to meet the refined aesthetic standards of professional designers. Through structured pipelines and disciplined art direction, the project showcases a series of studio-grade visual assets maintaining strict visual consistency.",
+      fr: "Tasteful est une exploration visuelle construite autour du concept de design « raffiné ». Le projet interroge la capacité de l'IA générative à dépasser les sorties brutes et aléatoires pour atteindre les standards esthétiques des designers professionnels. À travers des pipelines structurés et une direction artistique rigoureuse, il présente une série de visuels niveau studio, avec une cohérence visuelle stricte.",
+    },
+    tags: [
+      { en: "Fashion", fr: "Mode" },
+      { en: "Photography", fr: "Photographie" },
+      { en: "Art Direction", fr: "Direction artistique" },
+    ],
+    year: "2026",
+    type: "Video",
+    hasVideo: true,
+    videoUrl: "/projects/ai/tasteful/cover-video-tasteful.mp4",
+    videoPoster: "poster-cover-tasteful.png",
+    unmuteOnOpen: true,
+    tools: ["Recraft", "Premiere Pro", "Photoshop"],
+    links: {},
+    deliverableCount: 7,
+    deliverableLayout: "bento",
+    deliverables: [
+      {
+        type: "video",
+        url: "deliverables/deliverable-shooting-photo-tasteful.mp4",
+        sound: true,
+      },
+      {
+        type: "image",
+        url: "deliverables/deliverable-ayo-tailoring-tasteful.webp",
+        fallback: "deliverables/deliverable-ayo-tailoring-tasteful.png",
+      },
+      {
+        type: "image",
+        url: "deliverables/deliverable-elena-tailoring-tasteful.webp",
+        fallback: "deliverables/deliverable-elena-tailoring-tasteful.png",
+      },
+      {
+        type: "image",
+        url: "deliverables/deliverable-ines-tailoring-tasteful.webp",
+        fallback: "deliverables/deliverable-ines-tailoring-tasteful.png",
+      },
+      {
+        type: "image",
+        url: "deliverables/deliverable-mina-tailoring-tasteful.webp",
+        fallback: "deliverables/deliverable-mina-tailoring-tasteful.png",
+      },
+      {
+        type: "image",
+        url: "deliverables/deliverable-nour-tailoring-tasteful.webp",
+        fallback: "deliverables/deliverable-nour-tailoring-tasteful.png",
+      },
+      {
+        type: "image",
+        url: "deliverables/deliverable-mannequins-tasteful.webp",
+        fallback: "deliverables/deliverable-mannequins-tasteful.png",
+      },
+    ],
+  },
+  {
     id: "08",
     slug: "chivas",
     collection: "main",
