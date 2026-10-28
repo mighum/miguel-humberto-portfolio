@@ -452,7 +452,7 @@ export const projects: Project[] = [
     tools: ["Recraft", "Premiere Pro", "Photoshop"],
     links: {},
     deliverableCount: 7,
-    deliverableLayout: "bento",
+    deliverableLayout: "stack",
     deliverables: [
       {
         type: "video",
