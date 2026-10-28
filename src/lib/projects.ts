@@ -447,7 +447,7 @@ export const projects: Project[] = [
     type: "Video",
     hasVideo: true,
     videoUrl: "/projects/ai/tasteful/cover-video-tasteful.mp4",
-    videoPoster: "poster-cover-tasteful.png",
+    videoPoster: "poster-cover-tasteful.jpg",
     unmuteOnOpen: true,
     tools: ["Recraft", "Premiere Pro", "Photoshop"],
     links: {},
