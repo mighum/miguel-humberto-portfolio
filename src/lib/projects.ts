@@ -466,6 +466,12 @@ export const projects: Project[] = [
       { type: "still", file: "deliverables/deliverable-nour-tailoring-tasteful.webp" },
       { type: "still", file: "deliverables/deliverable-mannequins-tasteful.webp" },
     ],
+    processItems: [
+      { type: "image", file: "process/process-magnific-models-faces.webp" },
+      { type: "image", file: "process/process-magnific-models-bodies.webp" },
+      { type: "image", file: "process/process-magnific-decors.webp" },
+      { type: "image", file: "process/process-magnific-shooting.webp" },
+    ],
   },
   {
     id: "03",
