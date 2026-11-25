@@ -982,7 +982,7 @@ function DeliverablesVideoThenGrid({
   return (
     <div className="space-y-10 md:space-y-14">
       {video && video.type === "video" && (
-        <div className="mx-auto aspect-[9/16] w-full max-w-[22rem]">
+        <div className="mx-auto aspect-[3/4] w-full max-w-[22rem]">
           <DeliverableVideo
             src={`${assetBase}/${video.url}`}
             sound={video.sound}
